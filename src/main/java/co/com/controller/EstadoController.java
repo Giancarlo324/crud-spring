@@ -20,6 +20,6 @@ public class EstadoController {
 	@ResponseBody
 	public Estado getEstado(int codigoEstado) {
 		return estadoService.findByCodigo(codigoEstado);
-	}
+	}	
 
 }
