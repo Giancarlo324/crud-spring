@@ -37,7 +37,7 @@ public class JwtTokenUtil implements Serializable {
 		final Claims claims = getAllClaimsFromToken(token);
 		return claimsResolver.apply(claims);
 	}
-	// para recuperar cualquier información del token necesitaremos la clave secreta
+	// para recuperar cualquier informaciÃ³n del token necesitaremos la clave secreta
 	private Claims getAllClaimsFromToken(String token) {
 		return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
 	}
@@ -57,8 +57,8 @@ public class JwtTokenUtil implements Serializable {
 	 // al crear el token - 
 		// 1. Definir reclamos del token, como Emisor, Vencimiento, Asunto e ID
 		// 2. Firme el JWT utilizando el algoritmo HS512 y la clave secreta. 
-		// 3. De acuerdo con la serialización compacta de JWS (https://tools.ietf.org/html/draft-ietf-jose-json-web-signature-41#section-3.1) 
-		// compactación del JWT a una cadena 
+		// 3. De acuerdo con la serializaciÃ³n compacta de JWS (https://tools.ietf.org/html/draft-ietf-jose-json-web-signature-41#section-3.1)
+		// compactaciÃ³n del JWT a una cadena
 	private String doGenerateToken(Map<String, Object> claims, String subject) {
 
 		return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))

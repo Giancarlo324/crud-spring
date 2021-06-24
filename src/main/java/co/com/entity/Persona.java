@@ -3,7 +3,7 @@ package co.com.entity;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+@Entity(name = "Persona")
 @Table(name ="persona")
 public class Persona {
 
@@ -11,28 +11,28 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
 
-    @Column(name="nombre")
+    @Column(name="nombre", nullable = false)
     private String nombre;
 
-    @Column(name="apellido")
+    @Column(name="apellido", nullable = false)
     private String apellido;
 
-    @Column(name="fecha_nacimiento")
+    @Column(name="fecha_nacimiento", nullable = false)
     private Date fechaNacimiento;
 
-    @Column(name="username")
+    @Column(name="username", nullable = false)
     private String username;
 
-    @Column(name="password")
+    @Column(name="password", nullable = false)
     private String password;
 
-    @Column(name="identificacion")
+    @Column(name="identificacion", nullable = false)
     private int identificacion;
 
-    @Column(name="contigo_tipo_identificacion")
-    private int contigoTipoIdentificacion;
+    @Column(name="codigo_tipo_identificacion", nullable = false)
+    private int codigoTipoIdentificacion;
 
-    @Column(name="codigo_estado")
+    @Column(name="codigo_estado", nullable = false)
     private int codigoEstado;
 
     public int getCodigo() {
@@ -91,12 +91,12 @@ public class Persona {
         this.identificacion = identificacion;
     }
 
-    public int getContigoTipoIdentificacion() {
-        return contigoTipoIdentificacion;
+    public int getCodigoTipoIdentificacion() {
+        return codigoTipoIdentificacion;
     }
 
-    public void setContigoTipoIdentificacion(int contigoTipoIdentificacion) {
-        this.contigoTipoIdentificacion = contigoTipoIdentificacion;
+    public void setCodigoTipoIdentificacion(int codigoTipoIdentificacion) {
+        this.codigoTipoIdentificacion = codigoTipoIdentificacion;
     }
 
     public int getCodigoEstado() {
@@ -107,7 +107,7 @@ public class Persona {
         this.codigoEstado = codigoEstado;
     }
 
-    public Persona(int codigo, String nombre, String apellido, Date fechaNacimiento, String username, String password, int identificacion, int contigoTipoIdentificacion, int codigoEstado) {
+    public Persona(int codigo, String nombre, String apellido, Date fechaNacimiento, String username, String password, int identificacion, int codigoTipoIdentificacion, int codigoEstado) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -115,7 +115,7 @@ public class Persona {
         this.username = username;
         this.password = password;
         this.identificacion = identificacion;
-        this.contigoTipoIdentificacion = contigoTipoIdentificacion;
+        this.codigoTipoIdentificacion = codigoTipoIdentificacion;
         this.codigoEstado = codigoEstado;
     }
 

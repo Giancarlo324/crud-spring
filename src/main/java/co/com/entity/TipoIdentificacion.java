@@ -2,12 +2,14 @@ package co.com.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name ="tipo_identificacion")
+@RestResource(rel="tipo_identificacion", path="tipoidentificacion")
 public class TipoIdentificacion {
 
     @Id

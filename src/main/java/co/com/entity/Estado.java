@@ -2,6 +2,7 @@ package co.com.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +15,7 @@ import java.util.Date;
 
 @Entity
 @Table(name ="estado")
+@RestResource(rel="estados", path="estado")
 public class Estado {
 	
 	@Id

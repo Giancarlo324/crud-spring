@@ -1,4 +1,4 @@
-CREATE TABLE `estado` (
+CREATE TABLE IF NOT EXISTS `estado` (
   `codigo` int(11) NOT NULL,
   `nombre` varchar(20) NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -8,7 +8,7 @@ CREATE TABLE `estado` (
   PRIMARY KEY (`codigo`)
 );
 
-CREATE TABLE `persona` (
+CREATE TABLE IF NOT EXISTS `persona` (
   `codigo` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `apellido` varchar(100) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE `persona` (
   PRIMARY KEY (`codigo`)
 );
 
-CREATE TABLE `tipo_identificacion` (
+CREATE TABLE IF NOT EXISTS `tipo_identificacion` (
   `codigo` int(11) NOT NULL,
   `nombre` varchar(20) NOT NULL,
   `fecha_creacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
