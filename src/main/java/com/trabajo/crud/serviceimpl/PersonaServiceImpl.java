@@ -1,8 +1,9 @@
-package co.com.serivceimpl;
+package com.trabajo.crud.serviceimpl;
 
-import co.com.entity.Persona;
-import co.com.repository.PersonaRepository;
-import co.com.service.PersonaService;
+import com.trabajo.crud.entity.Persona;
+import com.trabajo.crud.repository.PersonaRepository;
+import com.trabajo.crud.service.PersonaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,32 +11,15 @@ import java.util.List;
 
 @Service
 public class PersonaServiceImpl implements PersonaService {
+    @Autowired
     PersonaRepository personaRepository;
 
-    public Persona getByCodigo(int codigo) {
-        return personaRepository.findByCodigo(codigo);
-    }
 
     @Override
     public List<Persona> getPersonas() {
         List<Persona> personaList = new ArrayList<>();
         personaRepository.findAll().forEach(personaList::add);
         return personaList;
-    }
-
-    @Override
-    public Persona getPersonaByCodigo(int codigo) {
-        return personaRepository.findById(codigo).get();
-    }
-
-    @Override
-    public Persona getPersonaByUsername(String username) {
-        return personaRepository.findByUsername(username);
-    }
-
-    @Override
-    public Persona getPersonaByIdentificacion(int identificacion) {
-        return personaRepository.findByIdentificacion(identificacion);
     }
 
     @Override

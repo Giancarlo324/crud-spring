@@ -1,9 +1,8 @@
-package co.com.trabajo.app;
+package com.trabajo.crud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class CrudApplicationTests {
-
 }

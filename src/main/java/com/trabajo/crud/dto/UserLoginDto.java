@@ -1,4 +1,4 @@
-package co.com.dto;
+package com.trabajo.crud.dto;
 
 public class UserLoginDto {
     private String username;

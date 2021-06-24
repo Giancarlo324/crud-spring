@@ -1,18 +1,13 @@
-package co.com.service;
+package com.trabajo.crud.service;
 
-import co.com.entity.Persona;
+
+import com.trabajo.crud.entity.Persona;
 
 import java.util.List;
 
 public interface PersonaService {
 
     List<Persona> getPersonas();
-
-    Persona getPersonaByCodigo(int codigo);
-
-    Persona getPersonaByUsername(String username);
-
-    Persona getPersonaByIdentificacion(int identificacion);
 
     Persona insert(Persona persona);
 

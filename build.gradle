@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'co.com.trabajo'
+group = 'com.trabajo'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -17,10 +17,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
-	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }

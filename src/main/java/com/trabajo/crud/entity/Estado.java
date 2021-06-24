@@ -1,4 +1,4 @@
-package co.com.entity;
+package com.trabajo.crud.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -19,7 +19,7 @@ import java.util.Date;
 public class Estado {
 	
 	@Id
-	@Column(updatable = false, nullable = false)
+	@Column(name="codigo", updatable = false, nullable = false)
 	private int codigo;
 	
 	@Column(name="nombre")
@@ -38,6 +38,10 @@ public class Estado {
 	
 	@Column(name="usuario_modificacion")
 	private String usuarioModificacion;
+
+	public Estado() {
+		super();
+	}
 
 	public int getCodigo() {
 		return codigo;
@@ -97,12 +101,4 @@ public class Estado {
 		this.fechaModificacion = fechaModificacion;
 		this.usuarioModificacion = usuarioModificacion;
 	}
-
-	public Estado() {
-		super();
-	}
-	
-	
-	
-
 }

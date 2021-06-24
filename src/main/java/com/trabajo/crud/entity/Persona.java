@@ -1,4 +1,4 @@
-package co.com.entity;
+package com.trabajo.crud.entity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,7 +8,7 @@ import java.util.Date;
 public class Persona {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="codigo", updatable = false, nullable = false)
     private int codigo;
 
     @Column(name="nombre", nullable = false)

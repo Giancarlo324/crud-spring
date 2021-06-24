@@ -1,4 +1,4 @@
-package co.com.entity;
+package com.trabajo.crud.entity;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -13,6 +13,7 @@ import java.sql.Timestamp;
 public class TipoIdentificacion {
 
     @Id
+    @Column(name="codigo", updatable = false, nullable = false)
     private int codigo;
 
     @Column(name="nombre")
@@ -31,6 +32,8 @@ public class TipoIdentificacion {
 
     @Column(name="usuario_modificacion")
     private String usuarioModificacion;
+
+    public TipoIdentificacion() { super(); }
 
     public int getCodigo() {
         return codigo;
@@ -88,6 +91,4 @@ public class TipoIdentificacion {
         this.fechaModificacion = fechaModificacion;
         this.usuarioModificacion = usuarioModificacion;
     }
-
-    public TipoIdentificacion() { super(); }
 }
