@@ -10,6 +10,10 @@ public interface PersonaService {
 
     Persona getPersonaByCodigo(int codigo);
 
+    Persona getPersonaByUsername(String username);
+
+    Persona getPersonaByIdentificacion(int identificacion);
+
     Persona insert(Persona persona);
 
     void updatePersona(int codigo, Persona persona);

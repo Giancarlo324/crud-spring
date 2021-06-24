@@ -12,6 +12,9 @@ import java.util.List;
 public class PersonaServiceImpl implements PersonaService {
     PersonaRepository personaRepository;
 
+    public Persona getByCodigo(int codigo) {
+        return personaRepository.findByCodigo(codigo);
+    }
 
     @Override
     public List<Persona> getPersonas() {
@@ -23,6 +26,16 @@ public class PersonaServiceImpl implements PersonaService {
     @Override
     public Persona getPersonaByCodigo(int codigo) {
         return personaRepository.findById(codigo).get();
+    }
+
+    @Override
+    public Persona getPersonaByUsername(String username) {
+        return personaRepository.findByUsername(username);
+    }
+
+    @Override
+    public Persona getPersonaByIdentificacion(int identificacion) {
+        return personaRepository.findByIdentificacion(identificacion);
     }
 
     @Override
