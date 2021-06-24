@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `username` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL,
   `identificacion` int(11) NOT NULL,
-  `contigo_tipo_identificacion` int(11) NOT NULL,
+  `codigo_tipo_identificacion` int(11) NOT NULL,
   `codigo_estado` int(11) NOT NULL,
   PRIMARY KEY (`codigo`)
 );
